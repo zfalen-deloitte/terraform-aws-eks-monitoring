@@ -1,3 +1,7 @@
 config:
-  lokiAddress: ${loki_address}
+  # -- The config of clients of the Promtail server
+  # Must be reference in `config.file` to configure `clients`
+  # @default -- See `values.yaml`
+  clients:
+    - url: ${loki_address}
 
